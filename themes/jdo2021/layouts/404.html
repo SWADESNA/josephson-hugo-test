@@ -1,0 +1,17 @@
+{{ define "header" }}<!-- no header -->{{ end }}
+{{ define "main"}}
+<div class="relative"><div class="absolute py-4 font-medium text-gray-500">{{ .Site.Title }}</div></div>
+<div class="flex justify-center items-center h-screen"><div class="flex flex-col">
+  <div class="flex items-center justify-center">
+    <svg class="text-gray-500 h-10 w-10 pr-2" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 4.75H15.25C17.4591 4.75 19.25 6.54086 19.25 8.75V15.25C19.25 17.4591 17.4591 19.25 15.25 19.25H8.75C6.54086 19.25 4.75 17.4591 4.75 15.25V8.75C4.75 6.54086 6.54086 4.75 8.75 4.75Z"></path>
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.75 15.25C7.75 15.25 9 12.75 12 12.75C15 12.75 16.25 15.25 16.25 15.25"></path>
+      <circle cx="14" cy="10" r="1" fill="currentColor"></circle>
+      <circle cx="10" cy="10" r="1" fill="currentColor"></circle>
+    </svg>          
+    <h2 class="text-xl">Sorry, that page couldn't be found</h2>
+  </div>
+  <p class="text-center">You can try looking for what you were after by starting from the <a href="/">home page</a>,
+    or <a href="/contact/">get in touch</a> and I'll try to help.</p>
+</div></div>
+{{ end }}

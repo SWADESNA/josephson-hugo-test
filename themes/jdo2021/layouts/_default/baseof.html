@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="mx-2 md:mx-auto max-w-3xl">
+            {{- block "header" . }}{{- partial "header.html" . -}}{{- end }}
+            <div id="content" class="mx-2 text-gray-700">
+            {{- block "main" . }}{{- end }}
+            </div>
+            {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

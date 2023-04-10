@@ -1,0 +1,113 @@
+---
+url: /contact/
+title: Contact
+menu:
+  main:
+    weight: 20
+---
+<h1 class="font-extrabold text-4xl mb-8 text-gray-900">Contact</h1>
+
+<div x-data="{ success: false, failed: false, invalid: false }">
+    <div x-cloak x-show="invalid" class="rounded-md bg-yellow-50 p-4 mb-4">
+    <div class="flex">
+        <div class="flex-shrink-0">
+        <!-- Heroicon name: solid/exclamation -->
+        <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+        </div>
+        <div class="ml-3">
+        <div class="text-sm text-yellow-700">
+            <p>
+            Please enter your email address and a message.
+            </p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div x-cloak x-show="failed" class="rounded-md bg-red-50 p-4 mb-4">
+        <div class="flex">
+            <div class="flex-shrink-0">
+            <!-- Heroicon name: solid/x-circle -->
+            <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+            </svg>
+            </div>
+            <div class="ml-3">
+            <div class="text-sm text-red-700">
+                <p>
+                Sorry, there was a problem sending your message. Please try again.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div> 
+
+    <div x-cloak x-show="success" class="rounded-md bg-green-50 p-4 mb-4">
+        <div class="flex">
+            <div class="flex-shrink-0">
+            <!-- Heroicon name: solid/check-circle -->
+            <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            </div>
+            <div class="ml-3">
+            <div class="text-sm text-green-700">
+                <p>
+                Thanks! Your message has been sent.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>  
+
+    <p class="text-xl text-center" id="intro">Get in touch using the form below or via email to
+
+        <script language="JavaScript"  type="text/javascript"><!--
+        document.write('<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;' + '&#109;&#105;&#107;&#101;&#64;' + '&#106;&#111;&#115;&#101;&#112;' + '&#104;&#115;&#111;&#110;&#46;' + '&#111;&#114;&#103;' + '">' + '&#109;&#105;&#107;&#101;&#64;' + '&#106;&#111;&#115;&#101;&#112;' + '&#104;&#115;&#111;&#110;&#46;' + '&#111;&#114;&#103;' + '<\/a>');
+        --></script><noscript><em>&#109;&#105;&#107;&#101;&#32;&#123;&#97;&#116;&#125;&#32;&#106;&#111;&#115;&#101;&#112;&#104;&#115;&#111;&#110;&#32;&#123;&#100;&#111;&#116;&#125;&#32;&#111;&#114;&#103;</em></noscript>
+        
+    </p>
+
+    <form @submit.prevent="sendMessage" id="contactForm" class="mt-4 max-w-lg mx-auto">
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">
+            Name
+            </label>
+            <div class="mt-1">
+            <input id="name" name="name" type="text" autofocus class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+        </div>
+
+        <div class="mt-4 space-y-1">
+            <label for="email" class="block text-sm font-medium text-gray-700">
+            Email address
+            </label>
+            <div class="mt-1">
+            <input id="email" name="email" type="email" required autocomplete="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+        </div>
+
+        <div class="mt-4 space-y-1">
+            <label for="message" class="block text-sm font-medium text-gray-700">
+            Message
+            </label>
+            <div class="mt-1">
+            <textarea rows="10" id="message" name="message" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="mt-4 inline-flex items-center justify-center py-1.5 px-3 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <svg class="mr-1" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19.25C7.99594 19.25 4.75 16.0041 4.75 12C4.75 7.99594 7.99594 4.75 12 4.75C18.8125 4.75 19.25 9.125 19.25 12V13.25C19.25 14.3546 18.3546 15.25 17.25 15.25V15.25C16.1454 15.25 15.25 14.3546 15.25 13.25V8.75"></path>
+            </svg>              
+            <span>Send</span>
+        </button>
+
+        <div id="internal" class="hidden">
+            <input name="comment" type="text">
+        </div>
+    </form>
+</div>

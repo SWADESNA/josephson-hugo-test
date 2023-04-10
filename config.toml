@@ -1,0 +1,7 @@
+baseURL = "https://josephson.org/"
+languageCode = "en-us"
+title = "Michael Josephson's homepage"
+theme = "jdo2021"
+disableKinds = ["RSS", "sitemap", "taxonomyTerm"]
+enableRobotsTXT = true
+enableGitInfo = true

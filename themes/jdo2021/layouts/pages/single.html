@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ if eq .File.Ext "md" }}
+    <article class="prose">{{ .Content }}</article>
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+{{ end }}

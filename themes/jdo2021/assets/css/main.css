@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#content a {
+  @apply text-purple-700 underline;
+}
+
+[x-cloak] {
+  display: none;
+}
+
+.prose {
+  max-width: none;
+}

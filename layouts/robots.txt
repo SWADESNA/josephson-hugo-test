@@ -1,0 +1,6 @@
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /images/mikej-wellphoto.jpg
+Disallow: /images/mikej-red_tshirt.jpg
